@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const MechanicsSchema = new mongoose.Schema({
     userName : {
         type : String,
-        required : true
+        required : true,
+        unique : true
     },
     fcmToken: {
         type : String,
@@ -11,5 +12,5 @@ const MechanicsSchema = new mongoose.Schema({
     }
 })
 
-const Mechanics = mongoose.model('user', MechanicsSchema)
+const Mechanics = mongoose.model('mechanics', MechanicsSchema)
 module.exports = Mechanics;

@@ -1,6 +1,9 @@
 // Enabling the .env file to be used
 require('dotenv').config()
 
+// To overcome error - navigator not defined 
+require('browser-env')();
+
 // Creating app with express
 const express = require('express')
 const app = express()
